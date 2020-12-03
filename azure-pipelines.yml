@@ -7,6 +7,7 @@ trigger:
 - main
 
 pool:
+  name: UbuntuToken 
   vmImage: 'aws-linux'
 
 steps:
@@ -20,9 +21,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
+  -  task: Bash@3
+     inputs:
+      targetType: 'inline'
         script: |
           #!/bin/bash
           #
