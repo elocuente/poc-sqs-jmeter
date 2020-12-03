@@ -21,7 +21,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-  -  task: Bash@3
+ - task: Bash@3
      inputs:
       targetType: 'inline'
         script: |
