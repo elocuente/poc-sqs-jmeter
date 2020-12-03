@@ -20,5 +20,5 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Bash@3
   inputs:
-    filePath: '$(System.DefaultWorkingDirectory)'
+    filePath: '/home/ec2-user/agent/docker-jmeter'
     arguments: './test2.sh'
